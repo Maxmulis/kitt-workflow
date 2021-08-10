@@ -1,5 +1,5 @@
 chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
-     if (changeInfo.status === 'complete') {
+     if (changeInfo.status === 'complete' && /^http/.test(tab.url)) {
         chrome.scripting.insertCSS({
             target: { tabId: tabId },
             files: ["./foreground_styles.css"]
