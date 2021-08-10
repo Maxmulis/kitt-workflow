@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "Kitt - workflows",
+  "version": "0.1.0",
+  "description": "Automatize standard workflows in Kitt ATS",
+  "permissions": [
+    "activeTab",
+    "tabs",
+    "storage",
+    "scripting"
+  ],
+
+  "host_permissions" : [
+    "<all_urls>"
+  ],
+
+  "background": {
+    "service_worker": "./background.js"
+  },
+
+  "icons": {
+    "60": "icons/wagon.png"
+  }
+}
